@@ -1,0 +1,39 @@
+{
+  "name": "enlight/laravel-installer",
+  "description": "A GUI Laravel Requirements Checker and Installer",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bhushan Gaykawad",
+      "homepage": "https://github.com/bhushan/laravel-installer",
+      "email": "bhushangaykawad@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "laravel/framework": "~5.4.0|~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Enlight\\LaravelInstaller\\": "src/"
+    },
+    "files": [
+      "src/Helpers/functions.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Enlight\\LaravelInstaller\\Providers\\LaravelInstallerServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev"
+}
